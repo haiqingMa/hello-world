@@ -19,6 +19,10 @@
 | 12345 | 23456 | 34567 |
 | ABCDE | **粗体文字在这里** | *斜体文字在这里* |
 | WWW | THIS IS A TEST LANGUAGE DO YOU KNOW |  PP DD WW |
+| 12345 | 23456 | 34567 |
+| ~~ABCDE~~ | **粗体文字在这里** | *斜体文字在这里* |
+| WWW | ==THIS IS A TEST LANGUAGE DO YOU KNOW== |  PP DD WW |
+
 
 - HELLO
 - WORLD
@@ -26,26 +30,26 @@
 - YOU
 
 
-
+-------
 
 `
-render: function() {
-    var make = CAR_MAKES_AND_MODELS[this.state.carMake];
-    var selectionString = make.name + ' ' + make.models[this.state.modelIndex];
-    return (
-        <PickerIOS
-        itemStyle={{fontSize: 25, color: 'red', textAlign: 'left', fontWeight: 'bold'}}
-        selectedValue={this.state.carMake}
-        onValueChange={(carMake) => this.setState({carMake, modelIndex: 0})}>
-        {Object.keys(CAR_MAKES_AND_MODELS).map((carMake) => (
-            <PickerItemIOS
-            key={carMake}
-            value={carMake}
-            label={CAR_MAKES_AND_MODELS[carMake].name}
-            />
-        ))}
-        </PickerIOS>
-    );
-  },
-});
+render: function() {  
+    var make = CAR_MAKES_AND_MODELS[this.state.carMake];  
+    var selectionString = make.name + ' ' + make.models[this.state.modelIndex];  
+    return (  
+        <PickerIOS  
+        itemStyle={{fontSize: 25, color: 'red', textAlign: 'left', fontWeight: 'bold'}}  
+        selectedValue={this.state.carMake}  
+        onValueChange={(carMake) => this.setState({carMake, modelIndex: 0})}>  
+        {Object.keys(CAR_MAKES_AND_MODELS).map((carMake) => (  
+            <PickerItemIOS  
+            key={carMake}  
+            value={carMake}  
+            label={CAR_MAKES_AND_MODELS[carMake].name}  
+            />  
+        ))}  
+        </PickerIOS>  
+    );  
+  },  
+});  
 `
