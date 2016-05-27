@@ -16,16 +16,16 @@
 | TableColumn1 | TableColumn2 | TableCoulmn3 |
 | ------------ |:------------:|-------------:|
 | 12345 | 23456 | 34567 |
-| ABCDE | EDFGHJ | OOP |
-| WWW | THIS IS A TEST | DDD |
+| ABCDE | **粗体文字在这里** | *斜体文字在这里* |
+| WWW | THIS IS A TEST LANGUAGE DO YOU KNOW | DDD EEE FFF MMM PP DD WW |
 
 - HELLO
 - WORLD
 - THANK
 - YOU
 
-**粗体文字在这里**
-*斜体文字在这里*
+
+
 
 '
 render: function() {
